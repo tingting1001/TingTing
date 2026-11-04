@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 from google import genai
 
 # Khởi tạo Gemini Client
-client = genai.Client(api_key="AQ.Ab8RN6JxFrYOSvhyK3YSmb1KJ6k2FIkGH9YHG7v74UrlxeFhUg")
+client = genai.Client(api_key="AQ.Ab8RN6KPBuJyR_yF20EB_SNDq2DcRf3aeL-rGtRUcukz52siKg")
 
 SYSTEM_INSTRUCTION = """
 Bạn là một trợ lý dịch thuật thông minh, chuyên nghiệp và am hiểu sâu sắc văn hóa giao tiếp giữa người Việt và người Trung Quốc.
@@ -22,7 +22,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-2.0-flash',
             contents=user_text,
             config={
                 'system_instruction': SYSTEM_INSTRUCTION,
