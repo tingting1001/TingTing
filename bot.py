@@ -37,7 +37,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"⚠️ Có lỗi xảy ra khi dịch: {str(e)}")
 
 if __name__ == '__main__':
-    TOKEN = "9290671112:AAHCqd1XXHcmHFyBKPTLtYs3FzrJHSXGTxM"
+    TOKEN = "9290671112:AAHCqdIXXHcmHfYKPTLtYs3FzrJHSXGTxM"
     
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message))
